@@ -3,7 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-
+    <modules>
+        <module>aws-cloud-ec2-rest</module>
+    </modules>
 
 
     <parent>
@@ -58,6 +60,17 @@
 			</activation>
 			<modules>
 				<module>aws-cloud-rds</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>aws-cloud-ec2-rest</id>
+			<activation>
+				<property>
+					<name>aws-cloud-ec2-rest</name>
+				</property>
+			</activation>
+			<modules>
+				<module>aws-cloud-ec2-rest</module>
 			</modules>
 		</profile>
 	</profiles>
